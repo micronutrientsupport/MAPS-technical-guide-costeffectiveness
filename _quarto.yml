@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: docs
+book:
+  title: "MAPS technical guide cost effectiveness"
+  author: "MAPS Team" #Katie Adams 
+  date: "11/26/2024" #USA format NB.
+ #site-url: https://CEmodels.micronutrient.support/
+ 
+  sidebar: 
+    logo: images/MAPS_sticker_purple.png  
+    search: true
+  
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - 01_DefineIntervention.qmd
+    #- 02_Methods.qmd
+  #  - 03_MethodsMetrics HOLD.qmd
+    #- 03_MethodsMetrics.qmd
+    #- 04_Interpretation.qmd
+   # - summary.qmd
+   # - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
+
+
+
+

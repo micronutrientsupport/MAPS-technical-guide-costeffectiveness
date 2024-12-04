@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAPS technical guide cost effectiveness - 4&nbsp; Summary of methods used in the cost and effectiveness module of the MAPS tool</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03_MethodsMetrics HOLD.html" rel="next">
+<link href="./01_DefineIntervention.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02_Methods.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary of methods used in the cost and effectiveness module of the MAPS tool</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/MAPS_sticker_purple.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">MAPS technical guide cost effectiveness</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About this guide</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MAPS cost effectiveness models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_DefineIntervention.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Guidelines for defining an intervention</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Methods.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary of methods used in the cost and effectiveness module of the MAPS tool</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_MethodsMetrics HOLD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The steps in estimating baseline prevalence of micronutrient deficiency</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Interpreting and comparing cost-effectiveness estimates</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#modeling-costs-in-the-maps-tool" id="toc-modeling-costs-in-the-maps-tool" class="nav-link active" data-scroll-target="#modeling-costs-in-the-maps-tool"><span class="header-section-number">4.1</span> Modeling costs in the MAPS tool</a>
+  <ul class="collapse">
+  <li><a href="#type-of-costing-and-data-sources" id="toc-type-of-costing-and-data-sources" class="nav-link" data-scroll-target="#type-of-costing-and-data-sources"><span class="header-section-number">4.1.1</span> <em>1. Type of costing and data sources</em></a></li>
+  <li><a href="#costing-perspective" id="toc-costing-perspective" class="nav-link" data-scroll-target="#costing-perspective"><span class="header-section-number">4.1.2</span> <em>2. Costing perspective</em></a></li>
+  <li><a href="#economic-costs" id="toc-economic-costs" class="nav-link" data-scroll-target="#economic-costs"><span class="header-section-number">4.1.3</span> <em>3. Economic costs</em></a></li>
+  <li><a href="#costing-base-year" id="toc-costing-base-year" class="nav-link" data-scroll-target="#costing-base-year"><span class="header-section-number">4.1.4</span> <em>4. Costing base year</em></a></li>
+  </ul></li>
+  <li><a href="#modeling-effectiveness-in-the-maps-tool" id="toc-modeling-effectiveness-in-the-maps-tool" class="nav-link" data-scroll-target="#modeling-effectiveness-in-the-maps-tool"><span class="header-section-number">4.2</span> Modeling effectiveness in the MAPS tool</a>
+  <ul class="collapse">
+  <li><a href="#effectiveness-and-related-indicators" id="toc-effectiveness-and-related-indicators" class="nav-link" data-scroll-target="#effectiveness-and-related-indicators"><span class="header-section-number">4.2.1</span> <em>Effectiveness (and related) indicators</em></a></li>
+  <li><a href="#data-sources-and-methods-for-modeling-effectiveness-and-other-indicators" id="toc-data-sources-and-methods-for-modeling-effectiveness-and-other-indicators" class="nav-link" data-scroll-target="#data-sources-and-methods-for-modeling-effectiveness-and-other-indicators"><span class="header-section-number">4.2.2</span> <em>Data sources and methods for modeling effectiveness and other indicators</em></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary of methods used in the cost and effectiveness module of the MAPS tool</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="modeling-costs-in-the-maps-tool" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="modeling-costs-in-the-maps-tool"><span class="header-section-number">4.1</span> Modeling costs in the MAPS tool</h2>
+<section id="type-of-costing-and-data-sources" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="type-of-costing-and-data-sources"><span class="header-section-number">4.1.1</span> <em>1. Type of costing and data sources</em></h3>
+<p>For each type of micronutrient intervention, we have developed an activity- and ingredients-based cost model to estimate the cost of the intervention over a 10-year time horizon. That is, for each type of intervention, we have defined a series of activities required to undertake the intervention, from start-up to scale-up through annual operating activities. Then, for each activity, we have identified the types and quantities of inputs, or ingredients, that are required to execute each activity, including equipment and supplies, personnel, etc. The models are then populated with data relevant to the specific country context. It is important to note that the cost models were designed to estimate the <em>additional</em> or <em>incremental</em> cost of the interventions and exclude costs involved in the production and distribution of the food vehicle or crop in the absence of fortification or biofortification. LSFF intervention costs, for example, do not include the cost of raw materials or ingredients used to produce the food vehicle itself (e.g., wheat, oil, salt, etc.) or the labor and management costs associated with producing the food vehicle. Similarly, biofortification costs do not include farmer labor or inputs that are typically employed in the cultivation of the non-biofortified variety of the crop.</p>
+<p>The additional or incremental activities and ingredients required to execute each type of micronutrient intervention were identified through a combination of literature reviews and interviews with international and local experts in LSFF and biofortification. Then, for Malawi and Ethiopia, country-specific data to populate each parameter of the cost models (including intervention characteristics, quantities of inputs, unit costs or the value of each input, etc.), were based on local primary data collection (interviews with government, industry, local experts, and other stakeholders), review of existing budgets, online sources (e.g., GFDx, the UNICEF supply catalogue, etc.), and the literature. The source of each parameter is documented in each cost model. The sources do not identify specific individuals or organizations. More information about specific sources is available upon request. Where no data source could be identified, the source is listed as “assumed” or “estimate”, meaning that we were unable to identify a good source of data for that parameter and had to make an informed guess about its value. Note that for hypothetical interventions, default cost model parameters are based on both data collection relevant to the specific food vehicle or crop as well as imputed based on data collected on existing, related intervention program costs (e.g., if a country has an existing wheat flour fortification program but does not have a maize flour fortification program, some of the maize flour fortification cost modeling parameters may be borrowed from the wheat flour cost data).</p>
+</section>
+<section id="costing-perspective" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="costing-perspective"><span class="header-section-number">4.1.2</span> <em>2. Costing perspective</em></h3>
+<p>By default, intervention costs are estimated from a societal perspective, meaning that the economic value of all resources used in providing and accessing an intervention are accounted for, regardless of who incurs them (Sanders, Neumann, Basu et al., 2016). As such, the cost estimates include costs potentially paid by industry, the government, civil society (aid and donor organizations, NGOs, etc.), farmers, consumers, etc. Note that because the stakeholder groups that ultimately pays each cost is not necessarily know (e.g., what proportion of LSFF premix costs will be passed on to consumers, what proportion of industry equipment costs might directly paid by industry vs subsidized by the government or an NGO, etc., whether the incremental cost of a biofortified seed variety will be paid for by farmers or subsidized by the government, etc.), in the cost models we intentionally avoid assigning costs to specific stakeholder groups and instead refer to “industry-related” costs, “government-related” costs, etc.</p>
+<p>For users who wish to estimate costs from a narrower perspective (e.g., government perspective), this is possible by zeroing out costs in the cost model that are expected to be paid by other stakeholder groups.</p>
+</section>
+<section id="economic-costs" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="economic-costs"><span class="header-section-number">4.1.3</span> <em>3. Economic costs</em></h3>
+<p>Intervention costs also reflect the economic (vs financial) cost of inputs, meaning that the value represents the opportunity cost of the input, or the value of the input in its next best alternative use (Turner, Sandmann, Downey et al., 2023; World Health Organization, 2003). For inputs that have a market value, such as paid labor, the economic cost may be the same as the financial cost. However, for inputs that are not paid for (e.g., volunteer labor or household time to participate in an intervention) the economic cost of the input is the input’s value in its next best alternative use. Similarly, for capital costs such as equipment, the annualized economic cost accounts not only for the expected useful life of the capital good but also the assumed discount rate (3% by default) to account for the opportunity cost of using the equipment for the intervention.</p>
+<p>In the tool, capital costs <span class="math inline">\(E\)</span> are annualized using the following equation (World Health Organization, 2003):</p>
+<center>
+<span class="math inline">\(E = \frac{P}{A(n,r)}\)</span>
+</center>
+<p><em>where</em> <span class="math inline">\(A(n,r) =  \frac{1-(1+r)^{-n}}{r}\)</span></p>
+<p>Here, <span class="math inline">\(P\)</span> is the purchase value of the capital item, including shipping and taxes (note that this assumes the salvage value, or the value of the capital item at the end of its useful life, is zero), <span class="math inline">\(n\)</span> is the assumed useful life of the capital item, and <span class="math inline">\(r\)</span> is the discount rate.</p>
+</section>
+<section id="costing-base-year" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="costing-base-year"><span class="header-section-number">4.1.4</span> <em>4. Costing base year</em></h3>
+<p>In the current version of the MAPS tool, costs are reported in 2021 US dollars (USD). For costs reported in USD, the value was adjusted to 2021 USD using the Bureau of Economic Analysis implicit price deflators for gross domestic product (Bureau of Economic Analysis, 2020). For costs reported in other currencies (e.g., Malawi Kwacha or Ethiopian Birr), costs were first adjusted to the 2019 value (where necessary) using the local GDP price deflator, then converted to USD using the average 2021 exchange rate. To maintain consistency, user-defined costs (i.e., costs modified by the user from the default value) should also be entered in 2021 USD.</p>
+</section>
+</section>
+<section id="modeling-effectiveness-in-the-maps-tool" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="modeling-effectiveness-in-the-maps-tool"><span class="header-section-number">4.2</span> Modeling effectiveness in the MAPS tool</h2>
+<section id="effectiveness-and-related-indicators" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="effectiveness-and-related-indicators"><span class="header-section-number">4.2.1</span> <em>Effectiveness (and related) indicators</em></h3>
+<p>In the MAPS tool, the effectiveness of micronutrient interventions is based on the concept of effective coverage, or the number or percent of households with inadequate apparent intake of the focus micronutrient without any interventions (that is, based on diets alone) who achieve dietary micronutrient adequacy as the result of the intervention. In the tool, the prevalence of micronutrient inadequacy and effective coverage can be calculated based on either apparent micronutrient intake per adult female equivalent (AFE) or based on the nutrient density of the household diet. Each of these approaches are described in detail below.</p>
+<p>In addition to effective coverage, several other indicators are automatically calculated in the MAPS tool effectiveness modeling framework, as defined in <strong>Table 3</strong>.</p>
+<table class="caption-top table">
+<caption>Table 3. Effective coverage and related indicators</caption>
+<colgroup>
+<col style="width: 9%">
+<col style="width: 90%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Indicator</strong></th>
+<th><strong>Definition</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Effective coverage</td>
+<td>The proportion of household with an inadequate apparent intake of the focus micronutrient at baseline (i.e., without interventions) that achieve dietary micronutrient adequacy with the specified intervention. In other words, this is the change in the prevalence of inadequacy from the baseline scenario to the modeled micronutrient intervention scenario.</td>
+</tr>
+<tr class="even">
+<td>Micronutrient inadequacy</td>
+<td>Estimate of the percent of households with an inadequate apparent intake of the focus micronutrient. This percentage is estimated both for the baseline scenario (i.e., without any interventions) as well as with the modeled micronutrient intervention scenario. Note that the difference in these two percentages is equivalent to effective coverage.</td>
+</tr>
+<tr class="odd">
+<td>Risk of high intakes</td>
+<td>The percent of households with apparent intake of the focus micronutrient above the tolerable upper intake level (UL).</td>
+</tr>
+<tr class="even">
+<td>Reach</td>
+<td>The proportion of household that reported consuming the food vehicle or crop, in any quantity, during the recall period.</td>
+</tr>
+<tr class="odd">
+<td>Apparent consumption among consumers</td>
+<td>The quantity of a food vehicle or crop apparently consumed among consumers (i.e., excluding household who did not consume the food vehicle or crop) per day per adult female equivalent (AFE).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-sources-and-methods-for-modeling-effectiveness-and-other-indicators" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="data-sources-and-methods-for-modeling-effectiveness-and-other-indicators"><span class="header-section-number">4.2.2</span> <em>Data sources and methods for modeling effectiveness and other indicators</em></h3>
+<p>Effective coverage and related indicators are modeled in the MAPS tool using food consumption data from household consumption and expenditure surveys (HCESs). HCESs, also known as household income and expenditure surveys, household budget surveys, integrated household surveys, and Living Standards Measurement Study surveys, are designed to collect data on various dimensions of household socioeconomic conditions, but most surveys also include a module to collect data on household consumption of and/or expenditures on a pre-defined list of food items (Fiedler, 2013; Coates, Colaiezzi, Fiedler et al., 2012). Variation in the design of the food consumption/expenditure modules of HCESs means that there is also variation in how well-suited the resulting data are to assess the micronutrient adequacy of diets and model the impacts of micronutrient interventions (Food and Agriculture Organization of the United Nations &amp; The World Bank, 2018). There are also a number of limitations inherent in using these data for nutrition analyses. Both of these issues are discussed in detail below. We qualify many of our estimates with the term “apparent” (e.g., apparent food consumption, apparent micronutrient intake, etc.) to emphasize the assumptions and limitations associated with using household-level food consumption data.</p>
+<p>The methods used in the MAPS tool to assess the adequacy of the household diet without and with micronutrient interventions generally follow the steps laid out in the USAID Methods Guide for using HCES data conduct a needs assessment and design/redesign an LSFF program (USAID Advancing Nutrition, 2023a). As noted above, the MAPS tool allows for calculating effectiveness (and related) indicators based on two approached: (1) apparent intake per AFE, and (2) the nutrient density of the household diet. Based on each approach, the steps listed below describe the methods used assess the baseline apparent adequacy of the household diet for meeting the requirements of household members, to model the impact of a micronutrient intervention on the micronutrient adequacy of the household diet, and to assess the risk of high micronutrient intakes in the MAPS tool cost and effectiveness module.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01_DefineIntervention.html" class="pagination-link" aria-label="Guidelines for defining an intervention">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Guidelines for defining an intervention</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03_MethodsMetrics HOLD.html" class="pagination-link" aria-label="The steps in estimating baseline prevalence of micronutrient deficiency">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The steps in estimating baseline prevalence of micronutrient deficiency</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

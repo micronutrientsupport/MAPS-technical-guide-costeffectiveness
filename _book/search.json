@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MAPS technical guide costeffectiveness",
+    "section": "",
+    "text": "1 About this guide\nThis guide is intended to provide technical detail for the cost, effectiveness, and cost-effectiveness modelling of micronutrient interventions in the Micronutrient Action Policy Support (MAPS) tool.\nThis guide can be read in sequence, or users can use the navigation panels to directly select the model section of interest.\nComplementary guides are provided for the MAPS tool user guide and MAPS learning resources.\nFurther information on the project and project team which created the MAPS tool can be found at the project website https://micronutrient.support/. A summary of our co-design process, implemented to design and test the MAPS tool, can be found at [].",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>About this guide</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Learning resources for MAPS",
+    "section": "",
+    "text": "2.1 The scope of this guide\nThis guide is aimed at anyone looking to understand the cost, effectiveness, and cost-effectiveness modelling of micronutrient interventions available in the MAPS tool as part of the learning activity.\n########## &lt; content under development&gt; ##########\nThe MAPS tool has been developed to meet the previously unmet needs of users for an “easy to use” system that does not require extensive training.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning resources for MAPS</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#accessing-the-maps-tool",
+    "href": "intro.html#accessing-the-maps-tool",
+    "title": "2  Learning resources for MAPS",
+    "section": "2.2 Accessing the MAPS tool",
+    "text": "2.2 Accessing the MAPS tool\nThe MAPS tool can be accessed directly from https://maps.micronutrient.support/ or https://maps.micronutrient.support/maps-tool, and via our shortcut https://www.maps.africa/. All three links lead to exactly the same version of the tool.\nThe MAPS tool has been optimised for screen sizes typically found with desktop and laptop devices, rather than smaller mobile devices. Using smaller devices is possible, but will not provide the intended user experience of the interfaces, particularly for the cost-effectiveness module. The tool will work in widely used commercial operating systems and web browsers (as at 2024).\nAccess is free of charge and does not require users to log-in. Users of the full scope of functionality, i.e. the cost & effectiveness modelling, and/or bring-your-own data, may prefer to create a user account in order to save for a later date their own input data and models.\nThe current version of the tool is &lt;&gt;, and returning users may need to check a locally cached earlier version is not being used. If this is the case, follow your browser instructions to clear the cache and refresh your version of the MAPS tool.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning resources for MAPS</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "01_DefineIntervention.html",
+    "href": "01_DefineIntervention.html",
+    "title": "3  Guidelines for defining an intervention",
+    "section": "",
+    "text": "3.1 Intervention type\nThe MAPS tool cost and effectiveness module allows users to estimate the cost, effectiveness, and cost-effectiveness of large-scale food fortification (LSFF), biofortification (via crop breeding), and agronomic biofortification interventions.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Guidelines for defining an intervention</span>"
+    ]
+  },
+  {
+    "objectID": "01_DefineIntervention.html#intervention-type",
+    "href": "01_DefineIntervention.html#intervention-type",
+    "title": "3  Guidelines for defining an intervention",
+    "section": "",
+    "text": "3.1.1 Food fortification\nFood fortification is the addition of vitamins and/or minerals to foods during processing to increase their nutrient content (Olson, Gavin-Smith, Ferraboschi et al., 2021). Large-scale food fortification (LSFF) is food fortification that occurs during processing at formal, centralized industries (USAID Advancing Nutrition, 2023b). In the MAPS cost and effectiveness module, LSFF food vehicle choices currently include wheat flour, maize flour, refined oil, rice, salt, and sugar. Food vehicle choices may be expanded in the future to include bouillon, margarine, and other condiments.\n\n\n3.1.2 Biofortification\nBiofortification via crop breeding is the process of increasing the vitamin or mineral content of a crop by crossing parent lines with high vitamin or mineral levels over several generations to produce plants with enhanced nutrient content and desired agronomic traits (Saltzman, Birol, Bouis et al., 2013). In the MAPS cost and effectiveness module, modeling of the cost, effectiveness, and cost-effectiveness of biofortification is limited to crops for which one or more biofortified variety has been released (or is near release) (see this table from HarvestPlus 2020 data on biofortified crops released or in testing by country). Before a biofortified seed variety is released, a 6 to 8 year process of discovery and development research is typically required (Bouis, Hotz, McClafferty et al., 2011). Because costs and effectiveness are modeled over a 10-year time horizon in MAPS (see methods below), biofortified crop varieties that are still in the discovery and developmental research phases would require a longer modeling time horizon to adequately capture costs and/or impacts after the variety is released. Therefore, when estimating the cost of biofortification via crop breeding, research costs incurred prior to in-country final testing and release of the variety are assumed sunk and are not accounted for.   \n\n\n3.1.3 Agronomic biofortification\nAgronomic biofortification is the process of increasing the micronutrient content of the edible portion of a crop through applying micronutrient-enriched fertilizers to the soil (granular) and/or sprayed on the plant leaves (foliar) (de Valença, Bake, Brouwer et al., 2017). The effectiveness of agronomic biofortification has been most widely studied for zinc, selenium, and iron, though agronomic biofortification with other nutrients is also possible. In the MAPS cost and effectiveness module, default application rates and grain concentrations/expected uptake are provided for some crop and mineral combinations. These defaults can be modified by tools users, and users can use the MAPS cost and/or effectiveness modelling framework to model crop and mineral combinations without default values (users will be required to specify application rates, expected grain concentrations, etc.).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Guidelines for defining an intervention</span>"
+    ]
+  },
+  {
+    "objectID": "01_DefineIntervention.html#intervention-status",
+    "href": "01_DefineIntervention.html#intervention-status",
+    "title": "3  Guidelines for defining an intervention",
+    "section": "3.2 Intervention status",
+    "text": "3.2 Intervention status\nThe intervention status can be set to either existing intervention program or hypothetical intervention program. This choice will impact some of the default cost and effectiveness modeling assumptions. Based on the descriptions in Table 1 below, the user should choose the intervention status that best reflects the current status of the intervention in the specific country context.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Guidelines for defining an intervention</span>"
+    ]
+  }
+]

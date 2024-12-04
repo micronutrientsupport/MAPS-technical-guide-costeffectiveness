@@ -1,0 +1,9 @@
+# About this guide
+
+This guide is intended to provide technical detail for the cost, effectiveness, and cost-effectiveness modelling of micronutrient interventions in the ***Micronutrient Action Policy Support (MAPS)*** tool.
+
+This guide can be read in sequence, or users can use the navigation panels to directly select the model section of interest.
+
+Complementary guides are provided for the [MAPS tool user guide](https://help.micronutrient.support/ "MAPS tool user guide") and [MAPS learning resources](https://learning.micronutrient.support/).
+
+Further information on the project and project team which created the MAPS tool can be found at the project website <https://micronutrient.support/>. A summary of our co-design process, implemented to design and test the MAPS tool, can be found at \[![](images/WiP_purplespanner.svg)\].

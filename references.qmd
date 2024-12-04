@@ -1,0 +1,42 @@
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+**References**
+
+Adams K.P., Vosti S.A., Mbuya M.N.N., Friesen V.M. & Engle-Stone R. (2022). Update on analytical methods and research gaps in the use of household consumption and expenditure survey data to inform the design of food-fortification programs. *Advances in Nutrition,* 13, 953-969 [https://doi.org/10.1093/advances/nmac021](https://doi.org/10.1093/advances/nmac021){target="_blank"}
+
+Allen L.H., Carriquiry A.L. & Murphy S.P. (2019). Perspective: Proposed harmonized nutrient reference values for populations. *Advances in Nutrition,* 11, 469-483. doi: 10.1093/advances/nmz096.
+
+Bailey L.B. (2000). New standard for dietary folate intake in pregnant women123. *The American Journal of Clinical Nutrition,* 71, 1304S-1307S. [link](https://doi.org/10.1093/ajcn/71.5.1304s){target="_blank"}
+
+Bouis H.E., Hotz C., McClafferty B., Meenakshi J.V. & Pfeiffer W.H. (2011). Biofortification: A new tool to reduce micronutrient malnutrition. *Food and Nutrition Bulletin,* 32, S31-S40. doi: 10.1177/15648265110321S105.
+
+Bureau of Economic Analysis (2020). Table 1.1.9. Implicit price deflators for gross domestic product. [https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&1921=survey&1903=13#reqid=19&step=3&isuri=1&1921=survey&1903=13](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&1921=survey&1903=13#reqid=19&step=3&isuri=1&1921=survey&1903=13){target="_blank"}
+
+Coates J., Colaiezzi B., Fiedler J.L., Wirth J., Lividini K. & Rogers B. (2012). A program needs-driven approach to selecting dietary assessment methods for decision-making in food fortification programs. *Food and Nutrition Bulletin,* 33, S146-S156. doi: 10.1177/15648265120333s202.
+
+de Valença A.W., Bake A., Brouwer I.D. & Giller K.E. (2017). Agronomic biofortification of crops to fight hidden hunger in sub-saharan Africa. *Global Food Security,* 12, 8-14. [https://doi.org/10.1016/j.gfs.2016.12.001](https://doi.org/10.1016/j.gfs.2016.12.001){target="_blank"}
+
+Fiedler J.L. (2013). Towards overcoming the food consumption information gap: Strengthening household consumption and expenditures surveys for food and nutrition policymaking. *Global Food Security,* 2, 56-63. doi: 10.1016/j.gfs.2012.09.002.
+
+Food and Agriculture Organization of the United Nations & The World Bank (2018). *Food data collection in household consumption and expenditure surveys. Guidelines for low-and middle-income countries.* FAO and the World Bank, Rome.
+
+Institute of Medicine (2001). *Dietary reference intakes for vitamin a, vitamin k, arsenic, boron, chromium, copper, iodine, iron, manganese, molybdenum, nickel, silicon, vanadium, and zinc.* National Academies Press, Washington, D.C.
+
+Olson R., Gavin-Smith B., Ferraboschi C. & Kraemer K. (2021). Food fortification: The advantages, disadvantages and lessons from Sight and Life programs. *Nutrients,* 13. doi: 10.3390/nu13041118.
+
+Saltzman A., Birol E., Bouis H.E., Boy E., De Moura F.F., Islam Y. & Pfeiffer W.H. (2013). Biofortification: Progress toward a more nourishing future. *Global Food Security,* 2, 9-17. doi: [https://doi.org/10.1016/j.gfs.2012.12.003](https://doi.org/10.1016/j.gfs.2012.12.003){target="_blank"}
+
+Sanders G.D., Neumann P.J., Basu A., Brock D.W., Feeny D., Krahn M., . . . Ganiats T.G. (2016). Recommendations for conduct, methodological practices, and reporting of cost-effectiveness analyses: Second panel on cost-effectiveness in health and medicine. *JAMA,* 316, 1093-1103. doi: 10.1001/jama.2016.12195.
+
+Turner H.C., Sandmann F.G., Downey L.E., Orangi S., Teerawattananon Y., Vassall A. & Jit M. (2023). What are economic costs and when should they be used in health economic studies? *Cost Eff Resour Alloc,* 21, 31. doi: 10.1186/s12962-023-00436-w.
+
+United Nations, Department of Economic and Social Affairs, Population Division (2019). World population prospects 2019, online edition. Rev. 1., [https://population.un.org/wpp/](https://population.un.org/wpp/){target="_blank"}
+
+USAID Advancing Nutrition (2023a). Methods guide: Needs assessment and design methodology to guide large-scale food fortification and broader programming to improve diets. USAID Advancing Nutrition, Arlington, VA, [https://www.advancingnutrition.org/sites/default/files/2023-10/usaid_an_lsff_methodsguide.pdf](https://www.advancingnutrition.org/sites/default/files/2023-10/usaid_an_lsff_methodsguide.pdf){target="_blank"}
+
+USAID Advancing Nutrition (2023b). Operational overview: Needs assessment and design methodology to guide large-scale food fortification and broader programming to improve diets. USAID Advancing Nutrition, Arlington, VA, [https://www.advancingnutrition.org/sites/default/files/2023-10/usaid_an_lsff_operationalguide.pdf](https://www.advancingnutrition.org/sites/default/files/2023-10/usaid_an_lsff_operationalguide.pdf){target="_blank"}
+
+World Health Organization (2003). Making choices in health: WHO guide to cost-effectiveness analysis. (eds T. Tan-Torres Edejer, B. R., T. Adams, R. Hutubessy, A. Acharya, D.B. Evans, et al.). Geneva, Switzerland. [https://iris.who.int/handle/10665/42699](https://iris.who.int/handle/10665/42699){target="_blank"}
