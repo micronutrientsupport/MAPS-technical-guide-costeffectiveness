@@ -1,7 +1,5 @@
 # Interpreting and comparing cost-effectiveness estimates
 
-> This section continues to be under development ![](images/WiP_purplespanner.svg)
-
 ## Limitations
 
 When using the modeled cost, effectiveness, or cost-effectiveness results generated using the MAPS tool cost-effectiveness module, it is important to keep the limitations of (and caveats associated with using) the underlying data sources in mind.
