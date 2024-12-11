@@ -15,12 +15,12 @@ book:
     - index.qmd
     - intro.qmd
     - 01_DefineIntervention.qmd
-    #- 02_Methods.qmd
+    - 02_Methods.qmd
   #  - 03_MethodsMetrics HOLD.qmd
-    #- 03_MethodsMetrics.qmd
-    #- 04_Interpretation.qmd
+    - 03_MethodsMetrics.qmd
+    - 04_Interpretation.qmd
    # - summary.qmd
-   # - references.qmd
+    - references.qmd
 
 bibliography: references.bib
 

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>MAPS technical guide cost effectiveness - 5&nbsp; The steps in MAPS cost, effectiveness and cost-effectiveness modelling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04_Interpretation.html" rel="next">
+<link href="./02_Methods.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_MethodsMetrics.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The steps in MAPS cost, effectiveness and cost-effectiveness modelling</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/MAPS_sticker_purple.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">MAPS technical guide cost effectiveness</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About this guide</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MAPS cost effectiveness models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_DefineIntervention.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Guidelines for defining an intervention</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary of methods used in the cost and effectiveness module of the MAPS tool</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_MethodsMetrics.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The steps in MAPS cost, effectiveness and cost-effectiveness modelling</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Interpretation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Interpreting and comparing cost-effectiveness estimates</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-steps-in-estimating-baseline-prevalence-of-micronutrient-deficiency" id="toc-the-steps-in-estimating-baseline-prevalence-of-micronutrient-deficiency" class="nav-link active" data-scroll-target="#the-steps-in-estimating-baseline-prevalence-of-micronutrient-deficiency"><span class="header-section-number">5.1</span> The steps in estimating baseline prevalence of micronutrient deficiency</a>
+  <ul class="collapse">
+  <li><a href="#apparent-intake-per-afe-approach" id="toc-apparent-intake-per-afe-approach" class="nav-link" data-scroll-target="#apparent-intake-per-afe-approach"><span class="header-section-number">5.1.1</span> Apparent intake per AFE approach</a></li>
+  <li><a href="#nutrient-density-of-the-household-diet-approach" id="toc-nutrient-density-of-the-household-diet-approach" class="nav-link" data-scroll-target="#nutrient-density-of-the-household-diet-approach"><span class="header-section-number">5.1.2</span> Nutrient density of the household diet approach</a></li>
+  </ul></li>
+  <li><a href="#steps-in-modeling-the-impact-of-micronutrient-interventions-and-risk-of-high-intakes" id="toc-steps-in-modeling-the-impact-of-micronutrient-interventions-and-risk-of-high-intakes" class="nav-link" data-scroll-target="#steps-in-modeling-the-impact-of-micronutrient-interventions-and-risk-of-high-intakes"><span class="header-section-number">5.2</span> Steps in modeling the impact of micronutrient interventions and risk of high intakes</a>
+  <ul class="collapse">
+  <li><a href="#apparent-intake-per-afe-approach-1" id="toc-apparent-intake-per-afe-approach-1" class="nav-link" data-scroll-target="#apparent-intake-per-afe-approach-1"><span class="header-section-number">5.2.1</span> Apparent intake per AFE approach</a></li>
+  <li><a href="#nutrient-density-of-the-household-diet-approach-1" id="toc-nutrient-density-of-the-household-diet-approach-1" class="nav-link" data-scroll-target="#nutrient-density-of-the-household-diet-approach-1"><span class="header-section-number">5.2.2</span> Nutrient density of the household diet approach</a></li>
+  </ul></li>
+  <li><a href="#modeling-cost-effectiveness-in-the-maps-tool" id="toc-modeling-cost-effectiveness-in-the-maps-tool" class="nav-link" data-scroll-target="#modeling-cost-effectiveness-in-the-maps-tool"><span class="header-section-number">5.3</span> Modeling cost-effectiveness in the MAPS tool</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The steps in MAPS cost, effectiveness and cost-effectiveness modelling</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-steps-in-estimating-baseline-prevalence-of-micronutrient-deficiency" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="the-steps-in-estimating-baseline-prevalence-of-micronutrient-deficiency"><span class="header-section-number">5.1</span> The steps in estimating baseline prevalence of micronutrient deficiency</h2>
+<section id="apparent-intake-per-afe-approach" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="apparent-intake-per-afe-approach"><span class="header-section-number">5.1.1</span> Apparent intake per AFE approach</h3>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For each food in the food list, we convert the reported quantity of food consumed by the household during the recall period (typically the past seven days) to grams and, where relevant, adjusted for the edible portion. Estimates of the edible portion of foods are taken from a locally-relevant food composition table (FCT), where possible, and otherwise based on input from local experts.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We match each food in the food list with a locally-relevant FCT entry to estimate nutrient composition of each food (link to description of matching process). Note that, unless the food in the HCES food list specifies a cooking method (e.g., sweet potato, boiled), foods are matched with the raw version of the food in the FCT, meaning that potential micronutrient losses during cooking are not accounted for.</p>
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We sum the apparent intake of the focus micronutrient from each food to calculate total daily average apparent micronutrient intake (total household intake divided by the number of days of recall).</p>
+<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Using information from the household roster, we calculate the number of AFEs in each household. Note that the number of AFEs in the household is calculated based on the sum of each household member’s age- and sex-specific energy requirements relative to the energy requirements of the reference household member, a non-pregnant, non-lactating adult female 18–30 years of age. Energy requirement estimates are based on the FAO/WHO Human Energy Requirements report (Food and Agricultural Organization of the United Nations &amp; World Health Organization, 2001), assuming a physical activity level of 1.6 for adults and average bodyweight based on country-specific estimates where available (e.g., Demographic and Health Survey).</p>
+<p>Table 4 summarizes the adjustment factors incorporated to account for energy requirements during lactation and the energy provided via breastmilk when infants are breastfeeding. Specifically, to account for additional energy requirements during lactation, we assume that all households with a child under 2 years of age also have a lactating mother (note that this is expected to be an overestimation of the total number of lactating women since there is likely to be variation in the degree of adherence to international breastfeeding guidelines). We add an additional 500 kcal per day to the base energy requirements of women assumed to be breastfeeding a child (Centers for Disease Control and Prevention, 2024). For infants under 2 years of age, we estimate total energy requirements from complementary foods (i.e., energy provided from the household diet) by subtracting the energy contributions from breastmilk from their daily energy requirements. The assumed contribution of breastmilk is age-specific (WHO Programme of Nutrition, 1998). We assume that children 0-2 months are exclusively breastfed and hence do not consume any portion of the household diet. For documentation on how these requirements are coded, see (link to GitHub). Because pregnancy status is not adequately collected (or not collected at all) in HCESs, we do not account for additional energy requirements during pregnancy.</p>
+<p>Note that adult female serves as the reference household member because her food consumption is expected to be approximately the average in the household. Moreover, her micronutrient requirements are generally high relative to other household members, so if the household’s micronutrient intake is adequate to meet her requirements (assuming that food is distributed within the household in proportion to age- and sex-specific energy requirements), it is likely adequate to meet the needs of other household members</p>
+<center>
+<table class="caption-top table">
+<caption>Table 4: Energy adjustment parameters for lactating women and breastfeeding infants</caption>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th style="text-align: right;">Energy (kcal)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Additional energy requirement for lactation</td>
+<td style="text-align: right;">500</td>
+</tr>
+<tr class="even">
+<td>Energy intake from breastmilk, age 3-5 months</td>
+<td style="text-align: right;">434</td>
+</tr>
+<tr class="odd">
+<td>Energy intake from breastmilk, age 6-8 months</td>
+<td style="text-align: right;">413</td>
+</tr>
+<tr class="even">
+<td>Energy intake from breastmilk, age 9-11 months</td>
+<td style="text-align: right;">379</td>
+</tr>
+<tr class="odd">
+<td>Energy intake from breastmilk, age 12-23 months</td>
+<td style="text-align: right;">346</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>&nbsp;<br>
+&nbsp;<br>
+5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We divide average daily total apparent micronutrient intake by the number of AFEs in the household to calculate baseline daily apparent micronutrient intake per AFE.</p>
+<p>We compare daily apparent micronutrient intake per AFE to the estimated average requirement (EAR) of an adult female to classify the household diet as adequate or inadequate to meeting the focus micronutrient requirements of an adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the baseline prevalence of inadequacy of the focus micronutrient. Note that the default EARs in the tool are based the harmonized average requirements presented in Allen, Carriquiry &amp; Murphy (2019), but these values can be modified by the user within the cost and effectiveness module framework of the tool.</p>
+</section>
+<section id="nutrient-density-of-the-household-diet-approach" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="nutrient-density-of-the-household-diet-approach"><span class="header-section-number">5.1.2</span> Nutrient density of the household diet approach</h3>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For each food in the food list, we convert the reported quantity of food consumed by the household during the recall period (typically the past seven days) to grams and, where relevant, adjusted for the edible portion. Estimates of the edible portion of foods taken from a locally-relevant food composition table (FCT), where possible, and otherwise based on input from local experts.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We match each food in the food list with a locally-relevant FCT entry to estimate energy and nutrient composition of each food (link to description of matching process). Note that, unless the food in the HCES food list specifies a cooking method (e.g., sweet potato, boiled), foods are matched with the raw version of the food in the FCT, meaning that potential micronutrient losses during cooking are not accounted for.</p>
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We sum the apparent intake of the focus micronutrient from each food to calculate total daily average apparent micronutrient intake (total household intake divided by the number of days of recall).</p>
+<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We sum the apparent intake of energy from each food to calculate total daily average apparent energy intake (total household energy intake divided by the number of days of recall).</p>
+<p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For the focus micronutrient, we calculate the baseline nutrient density of the household diet by dividing total daily average apparent micronutrient intake by total daily average apparent energy intake, multiplied by 1000 to express the nutrient density per 1,000 kcal.</p>
+<p>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We compare the household nutrient density to the critical nutrient density of an adult female to classify the household diet as adequate or inadequate to meeting micronutrient requirements of an adult female, assuming energy requirements are met. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the baseline prevalence of inadequacy of the focus micronutrient.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that the critical nutrient density is calculated as the EAR of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.</p>
+</section>
+</section>
+<section id="steps-in-modeling-the-impact-of-micronutrient-interventions-and-risk-of-high-intakes" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="steps-in-modeling-the-impact-of-micronutrient-interventions-and-risk-of-high-intakes"><span class="header-section-number">5.2</span> Steps in modeling the impact of micronutrient interventions and risk of high intakes</h2>
+<section id="apparent-intake-per-afe-approach-1" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="apparent-intake-per-afe-approach-1"><span class="header-section-number">5.2.1</span> Apparent intake per AFE approach</h3>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We calculate total average daily apparent household consumption of the relevant food vehicle (for modeling LSFF) or crop (for modeling biofortification).&nbsp; This includes fortifiable/biofortifiable food equivalents from processed foods containing the food vehicle or crop (e.g., wheat flour in bread). Fortifiable/biofortifiable food equivalents are drawn from a MAPS database of country-specific equivalents populated based on local recipes and input from in-country experts.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We divide total average daily apparent household consumption of the food vehicle or crop by the number of AFEs in the household to generate estimate of daily average apparent consumption per AFE.</p>
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For modeling LSFF, for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by LSFF by multiplying daily average apparent consumption of the food vehicle per AFE (assumed constant over the 10-year horizon) by the year-specific average fortification level. Note that the average fortification level in each year is calculated as the target fortification level multiplied by the percent of the food vehicle that is fortifiable, the proportion of the food vehicle that is fortified to any extent, the average fortification level among the fortified food vehicle as a percent of the standard (at point of fortification), and the expected micronutrient retention from point of fortification to households. Each of these parameters is modifiable by the user in the tool.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).</p>
+<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by biofortification by multiplying daily average apparent consumption of the crop per AFE (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the additional micronutrient concentration in the biofortified crop (country-specific default values based on the HarvestPlus database of biofortified crops released - <a href="https://bcr.harvestplus.org/" class="uri">https://bcr.harvestplus.org/</a>) multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).</p>
+<p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We add additional daily apparent micronutrient intake per AFE provided by LSFF or biofortification to baseline daily apparent micronutrient intake per AFE to generate an estimate of total daily apparent micronutrient intake per AFE with LSFF or biofortification.</p>
+<p>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We compare daily apparent micronutrient intake per AFE with LSFF or biofortification to the EAR of an adult female to classify the household diet as adequate or inadequate to meeting the focus micronutrient requirements of an adult female with the micronutrient intervention. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the prevalence of inadequacy of the focus micronutrient with LSFF or biofortification.</p>
+<p>7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For each year of the 10-year modeling time horizon, we subtract the prevalence of inadequacy with LSFF or biofortification from the baseline prevalence of inadequacy to estimate effective coverage of the micronutrient intervention.</p>
+<p>8.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For micronutrients with a tolerable upper intake level (UL), we compare daily apparent micronutrient intake per AFE with LSFF or biofortification to UL of an adult female to classify the household diet as providing less than or above the UL threshold for and adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the prevalence of high intakes per AFE with LSFF or biofortification.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that the UL for vitamin A applies only to preformed retinol, and the UL for folate applies only to synthetic folic acid.</p>
+</section>
+<section id="nutrient-density-of-the-household-diet-approach-1" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="nutrient-density-of-the-household-diet-approach-1"><span class="header-section-number">5.2.2</span> Nutrient density of the household diet approach</h3>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We calculate total average daily apparent household consumption of the relevant food vehicle (for modeling LSFF) or crop (for modeling biofortification).&nbsp; This includes fortifiable/biofortifiable food equivalents from processed foods containing the food vehicle or crop (e.g., wheat flour in bread). Fortifiable/biofortifiable food equivalents are drawn from a MAPS database of country-specific equivalents populated based on local recipes and input from in-country experts.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For modeling LSFF, for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by LSFF by multiplying daily average apparent consumption of the food vehicle (assumed constant over the 10-year horizon) by the year-specific average fortification level. Note that the average fortification level in each year is calculated as the target fortification level multiplied by the percent of the food vehicle that is fortifiable, the proportion of the food vehicle that is fortified to any extent, the average fortification level among the fortified food vehicle as a percent of the standard (at point of fortification), and the expected micronutrient retention from point of fortification to households. Each of these parameters is modifiable by the user in the tool.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).</p>
+<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by biofortification by multiplying daily average apparent consumption of the crop (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the additional micronutrient concentration in the biofortified crop (country-specific default values based on the HarvestPlus database of biofortified crops released - <a href="https://bcr.harvestplus.org/" class="uri">https://bcr.harvestplus.org/</a>), multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).</p>
+<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We add additional daily apparent micronutrient intake provided by LSFF or biofortification to baseline daily apparent micronutrient intake and recalculated the nutrient density of the household diet with LSFF or biofortification (that is, we divide total daily average apparent micronutrient intake with LSFF or biofortification by total daily average apparent energy intake, multiplied by 1000 to express the nutrient density per 1,000 kcal).</p>
+<p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We compare the household nutrient density with LSFF or biofortification to the critical nutrient density of an adult female to classify the household diet as adequate or inadequate to meeting micronutrient requirements of an adult female with the micronutrient intervention, assuming energy requirements are met. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the prevalence of inadequacy of the focus micronutrient with LSFF or biofortification.</p>
+<p>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For each year of the 10-year modeling time horizon, we subtract the prevalence of inadequacy with LSFF or biofortification from the baseline prevalence of inadequacy to estimate effective coverage of the micronutrient intervention.</p>
+<p>7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For micronutrients with a tolerable upper intake level (UL), we compare household nutrient density with LSFF or biofortification to the critical upper density of an adult female to classify the household diet as providing less than or above the UL threshold for an adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the prevalence of high intakes with LSFF or biofortification.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note that the UL for vitamin A applies only to preformed retinol, and the UL for folate applies only to synthetic folic acid.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Also note that the critical upper density is calculated as the UL of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.</p>
+</section>
+</section>
+<section id="modeling-cost-effectiveness-in-the-maps-tool" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="modeling-cost-effectiveness-in-the-maps-tool"><span class="header-section-number">5.3</span> Modeling cost-effectiveness in the MAPS tool</h2>
+<p>When the user has estimated both the cost and effectiveness of a micronutrient intervention, they also able to generate estimates of the cost-effectiveness of the micronutrient intervention program over the 10-year time horizon. To estimate cost-effectiveness, the year-specific percent of households effectively covered (that is, the percent of households with inadequate intake of the focus micronutrient in the baseline (i.e., without intervention) scenario that achieve dietary micronutrient adequacy with the intervention) are converted to estimates of the annual number of households effectively covered. This requires introducing estimates of the projected number of households for each year of the 10-year time horizon.</p>
+<p>We estimate the projected number of households by combining UN World Population Prospects population projections (United Nations, 2019) over the 10-year time horizon with estimates of average household size to project the number of households for each year of the 10-year time horizon. Specifically, we weight the national population projection in each year by the admin level 1 share of the national population (according to the most recent census data) to disaggregate the population projections to the sub-national level. Then, we estimate the number of households each year by dividing the sub-national projections by estimates of the average household size at each admin level 1 (typically according to the most recent Demographic and Health Survey or the most recent Household Consumption and Expenditure Survey). We then multiply the percent of households effectively covered in each year to the projected number of households in that year to estimate the number of households effectively covered in a specific year.</p>
+<p>The cost-effectiveness of the intervention is then calculated as the 10-year sum of total annual costs divided by the 10-year total annual sum of households effectively covered, or:</p>
+<center>
+<em>cost-effectiveness</em> = <span class="math inline">\(\frac{∑_{t=1}^{10}total annual cost_t}{∑_{t=1}^{10}annual households effectively covered_t}\)</span>
+</center>
+<p>&nbsp;<br>
+&nbsp;</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02_Methods.html" class="pagination-link" aria-label="Summary of methods used in the cost and effectiveness module of the MAPS tool">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary of methods used in the cost and effectiveness module of the MAPS tool</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04_Interpretation.html" class="pagination-link" aria-label="Interpreting and comparing cost-effectiveness estimates">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Interpreting and comparing cost-effectiveness estimates</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

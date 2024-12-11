@@ -1,26 +1,45 @@
-# The steps in estimating baseline prevalence of micronutrient deficiency
+# The steps in MAPS cost, effectiveness and cost-effectiveness modelling
 
-\################## SECTION UNDER DEVELOPMENT \##############################
+## The steps in estimating baseline prevalence of micronutrient deficiency
 
-## Apparent intake per AFE approach
+### Apparent intake per AFE approach
 
-1.       For each food in the food list, we convert the reported quantity of food consumed by the household during the recall period (typically the past seven days) to grams and, where relevant, adjusted for the edible portion. Estimates of the edible portion of foods are taken from xx, xx, and xx[\[KPA1\]](#_msocom_1) .
+1.       For each food in the food list, we convert the reported quantity of food consumed by the household during the recall period (typically the past seven days) to grams and, where relevant, adjusted for the edible portion. Estimates of the edible portion of foods are taken from a locally-relevant food composition table (FCT), where possible, and otherwise based on input from local experts.
 
-2.       We match each food in the food list with a locally-relevant food composition table (FCT) entry to estimate nutrient composition of each food (link to description of matching process). Note that foods are matched with the raw version of the food in the FCT, meaning that potential micronutrient losses during cooking are not accounted for. This is because … \[add explanation here[\[KPA2\]](#_msocom_2) \].
+2.       We match each food in the food list with a locally-relevant FCT entry to estimate nutrient composition of each food (link to description of matching process). Note that, unless the food in the HCES food list specifies a cooking method (e.g., sweet potato, boiled), foods are matched with the raw version of the food in the FCT, meaning that potential micronutrient losses during cooking are not accounted for.
 
 3.       We sum the apparent intake of the focus micronutrient from each food to calculate total daily average apparent micronutrient intake (total household intake divided by the number of days of recall).
 
-4.       Using information from the household roster, we calculate the number of AFEs in each household. Note that the number of AFEs in the household is calculated based on the sum of each household member’s age- and sex-specific energy requirements relative to the energy requirements of the reference household member, a non-pregnant, non-lactating adult female 18–30 years of age. (add text – or link to text - describing out assumptions about energy requirements of different household members, including PAL, bodyweight, breastfeeding, etc.[\[KPA3\]](#_msocom_3) ). Note that adult female serves as the reference household member because her food consumption is expected to be approximately the average in the household. Moreover, her micronutrient requirements are generally high relative to other household members, so if the household’s micronutrient intake is adequate to meet her requirements (assuming that food is distributed within the household in proportion to age- and sex-specific energy requirements), it is likely adequate to meet the needs of other household members. There are, of course exceptions, to this (see description of ‘most vulnerable household member’ analysis)[\[KPA4\]](#_msocom_4) .
+4.       Using information from the household roster, we calculate the number of AFEs in each household. Note that the number of AFEs in the household is calculated based on the sum of each household member’s age- and sex-specific energy requirements relative to the energy requirements of the reference household member, a non-pregnant, non-lactating adult female 18–30 years of age. Energy requirement estimates are based on the FAO/WHO Human Energy Requirements report (Food and Agricultural Organization of the United Nations & World Health Organization, 2001), assuming a physical activity level of 1.6 for adults and average bodyweight based on country-specific estimates where available (e.g., Demographic and Health Survey).
 
+Table 4 summarizes the adjustment factors incorporated to account for energy requirements during lactation and the energy provided via breastmilk when infants are breastfeeding. Specifically, to account for additional energy requirements during lactation, we assume that all households with a child under 2 years of age also have a lactating mother (note that this is expected to be an overestimation of the total number of lactating women since there is likely to be variation in the degree of adherence to international breastfeeding guidelines). We add an additional 500 kcal per day to the base energy requirements of women assumed to be breastfeeding a child (Centers for Disease Control and Prevention, 2024). For infants under 2 years of age, we estimate total energy requirements from complementary foods (i.e., energy provided from the household diet) by subtracting the energy contributions from breastmilk from their daily energy requirements. The assumed contribution of breastmilk is age-specific (WHO Programme of Nutrition, 1998). We assume that children 0-2 months are exclusively breastfed and hence do not consume any portion of the household diet. For documentation on how these requirements are coded, see (link to GitHub). Because pregnancy status is not adequately collected (or not collected at all) in HCESs, we do not account for additional energy requirements during pregnancy.
+
+Note that adult female serves as the reference household member because her food consumption is expected to be approximately the average in the household. Moreover, her micronutrient requirements are generally high relative to other household members, so if the household’s micronutrient intake is adequate to meet her requirements (assuming that food is distributed within the household in proportion to age- and sex-specific energy requirements), it is likely adequate to meet the needs of other household members
+
+<center>
+
+| Parameter                                       | Energy (kcal) |
+|-------------------------------------------------|--------------:|
+| Additional energy requirement for lactation     |           500 |
+| Energy intake from breastmilk, age 3-5 months   |           434 |
+| Energy intake from breastmilk, age 6-8 months   |           413 |
+| Energy intake from breastmilk, age 9-11 months  |           379 |
+| Energy intake from breastmilk, age 12-23 months |           346 |
+
+: Table 4: Energy adjustment parameters for lactating women and breastfeeding infants
+
+</center>
+&nbsp;  
+&nbsp;  
 5.       We divide average daily total apparent micronutrient intake by the number of AFEs in the household to calculate baseline daily apparent micronutrient intake per AFE.
 
-6.       We compare daily apparent micronutrient intake per AFE to the estimated average requirement (EAR) of an adult female to classify the household diet as adequate or inadequate to meeting the focus micronutrient requirements of an adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the baseline prevalence of inadequacy of the focus micronutrient. Note that the default EARs in the tool are based the harmonized average requirements presented in Allen, Carriquiry & Murphy (2019), but these values can be modified by the user within the cost and effectiveness module framework of the tool.
+We compare daily apparent micronutrient intake per AFE to the estimated average requirement (EAR) of an adult female to classify the household diet as adequate or inadequate to meeting the focus micronutrient requirements of an adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the baseline prevalence of inadequacy of the focus micronutrient. Note that the default EARs in the tool are based the harmonized average requirements presented in Allen, Carriquiry & Murphy (2019), but these values can be modified by the user within the cost and effectiveness module framework of the tool.
 
-## Nutrient density of the household diet approach
+### Nutrient density of the household diet approach
 
-1.       For each food in the food list, we convert the reported quantity of food consumed by the household during the recall period (typically the past seven days) to grams and, where relevant, adjusted for the edible portion. Estimates of the edible portion of foods taken from xx, xx, and xx.
+1.       For each food in the food list, we convert the reported quantity of food consumed by the household during the recall period (typically the past seven days) to grams and, where relevant, adjusted for the edible portion. Estimates of the edible portion of foods taken from a locally-relevant food composition table (FCT), where possible, and otherwise based on input from local experts.
 
-2.       We match each food in the food list with a locally-relevant food composition table (FCT) entry to estimate energy and nutrient composition of each food (link to description of matching process). Note that foods are matched with the raw version of the food in the FCT, meaning that potential micronutrient losses during cooking are not accounted for. This is because … \[add explanation here\].
+2.       We match each food in the food list with a locally-relevant FCT entry to estimate energy and nutrient composition of each food (link to description of matching process). Note that, unless the food in the HCES food list specifies a cooking method (e.g., sweet potato, boiled), foods are matched with the raw version of the food in the FCT, meaning that potential micronutrient losses during cooking are not accounted for.
 
 3.       We sum the apparent intake of the focus micronutrient from each food to calculate total daily average apparent micronutrient intake (total household intake divided by the number of days of recall).
 
@@ -30,23 +49,23 @@
 
 6.       We compare the household nutrient density to the critical nutrient density of an adult female to classify the household diet as adequate or inadequate to meeting micronutrient requirements of an adult female, assuming energy requirements are met. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the baseline prevalence of inadequacy of the focus micronutrient.
 
-a.       Note that the critical nutrient density is calculated as the EAR of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.
+      a.       Note that the critical nutrient density is calculated as the EAR of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.
 
-Ø  *Steps in modeling the impact of micronutrient interventions and risk of high intakes*
+## Steps in modeling the impact of micronutrient interventions and risk of high intakes
 
-## Apparent intake per AFE approach
+### Apparent intake per AFE approach
 
-1.       We calculate total average daily apparent household consumption of the relevant food vehicle (for modeling LSFF) or crop (for modeling biofortification).  This includes fortifiable/biofortifiable food equivalents from processed foods containing the food vehicle or crop (e.g., wheat flour in bread). Fortifiable/biofortifiable food equivalents are drawn from a MAPS database of country-specific equivalents populated based on local recipes, input from in-country experts, and xxx[\[KPA5\]](#_msocom_5) .
+1.       We calculate total average daily apparent household consumption of the relevant food vehicle (for modeling LSFF) or crop (for modeling biofortification).  This includes fortifiable/biofortifiable food equivalents from processed foods containing the food vehicle or crop (e.g., wheat flour in bread). Fortifiable/biofortifiable food equivalents are drawn from a MAPS database of country-specific equivalents populated based on local recipes and input from in-country experts.
 
 2.       We divide total average daily apparent household consumption of the food vehicle or crop by the number of AFEs in the household to generate estimate of daily average apparent consumption per AFE.
 
 3.       For modeling LSFF, for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by LSFF by multiplying daily average apparent consumption of the food vehicle per AFE (assumed constant over the 10-year horizon) by the year-specific average fortification level. Note that the average fortification level in each year is calculated as the target fortification level multiplied by the percent of the food vehicle that is fortifiable, the proportion of the food vehicle that is fortified to any extent, the average fortification level among the fortified food vehicle as a percent of the standard (at point of fortification), and the expected micronutrient retention from point of fortification to households. Each of these parameters is modifiable by the user in the tool.
 
-a.       Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).
+      a.        Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).
 
-4.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by biofortification by multiplying daily average apparent consumption of the crop per AFE (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as xxx, multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.
+4.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by biofortification by multiplying daily average apparent consumption of the crop per AFE (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the additional micronutrient concentration in the biofortified crop (country-specific default values based on the HarvestPlus database of biofortified crops released - <https://bcr.harvestplus.org/>) multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.
 
-a.       Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
+      a.        Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
 
 5.       We add additional daily apparent micronutrient intake per AFE provided by LSFF or biofortification to baseline daily apparent micronutrient intake per AFE to generate an estimate of total daily apparent micronutrient intake per AFE with LSFF or biofortification.
 
@@ -56,19 +75,19 @@ a.       Note that we convert vitamin A in the form of pro-vitamin A (PVA)
 
 8.       For micronutrients with a tolerable upper intake level (UL), we compare daily apparent micronutrient intake per AFE with LSFF or biofortification to UL of an adult female to classify the household diet as providing less than or above the UL threshold for and adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the prevalence of high intakes per AFE with LSFF or biofortification.
 
-a.       Note that the UL for vitamin A applies only to preformed retinol, and the UL for folate applies only to synthetic folic acid.
+      a.        Note that the UL for vitamin A applies only to preformed retinol, and the UL for folate applies only to synthetic folic acid.
 
-## Nutrient density of the household diet approach
+### Nutrient density of the household diet approach
 
-1.       We calculate total average daily apparent household consumption of the relevant food vehicle (for modeling LSFF) or crop (for modeling biofortification).  This includes fortifiable/biofortifiable food equivalents from processed foods containing the food vehicle or crop (e.g., wheat flour in bread). Fortifiable/biofortifiable food equivalents are drawn from a MAPS database of country-specific equivalents populated based on local recipes, input from in-country experts, and xxx.
+1.       We calculate total average daily apparent household consumption of the relevant food vehicle (for modeling LSFF) or crop (for modeling biofortification).  This includes fortifiable/biofortifiable food equivalents from processed foods containing the food vehicle or crop (e.g., wheat flour in bread). Fortifiable/biofortifiable food equivalents are drawn from a MAPS database of country-specific equivalents populated based on local recipes and input from in-country experts.
 
 2.       For modeling LSFF, for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by LSFF by multiplying daily average apparent consumption of the food vehicle (assumed constant over the 10-year horizon) by the year-specific average fortification level. Note that the average fortification level in each year is calculated as the target fortification level multiplied by the percent of the food vehicle that is fortifiable, the proportion of the food vehicle that is fortified to any extent, the average fortification level among the fortified food vehicle as a percent of the standard (at point of fortification), and the expected micronutrient retention from point of fortification to households. Each of these parameters is modifiable by the user in the tool.
 
-a.       Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).
+      a.        Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).
 
-3.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by biofortification by multiplying daily average apparent consumption of the crop (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as xxx, multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.
+3.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by biofortification by multiplying daily average apparent consumption of the crop (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the additional micronutrient concentration in the biofortified crop (country-specific default values based on the HarvestPlus database of biofortified crops released - <https://bcr.harvestplus.org/>), multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.
 
-a.       Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
+      a.        Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
 
 4.       We add additional daily apparent micronutrient intake provided by LSFF or biofortification to baseline daily apparent micronutrient intake and recalculated the nutrient density of the household diet with LSFF or biofortification (that is, we divide total daily average apparent micronutrient intake with LSFF or biofortification by total daily average apparent energy intake, multiplied by 1000 to express the nutrient density per 1,000 kcal).
 
@@ -78,9 +97,9 @@ a.       Note that we convert vitamin A in the form of pro-vitamin A (PVA)
 
 7.       For micronutrients with a tolerable upper intake level (UL), we compare household nutrient density with LSFF or biofortification to the critical upper density of an adult female to classify the household diet as providing less than or above the UL threshold for an adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the prevalence of high intakes with LSFF or biofortification.
 
-a.       Note that the UL for vitamin A applies only to preformed retinol, and the UL for folate applies only to synthetic folic acid.
+      a.        Note that the UL for vitamin A applies only to preformed retinol, and the UL for folate applies only to synthetic folic acid.
 
-b.       Also note that the critical upper density is calculated as the UL of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.
+      b.        Also note that the critical upper density is calculated as the UL of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.
 
 ## Modeling cost-effectiveness in the MAPS tool
 
@@ -90,14 +109,7 @@ We estimate the projected number of households by combining UN World Population 
 
 The cost-effectiveness of the intervention is then calculated as the 10-year sum of total annual costs divided by the 10-year total annual sum of households effectively covered, or:
 
- [\[KPA1\]](#_msoanchor_1)For the countries in the c-e tool, where do the edible portion estimates come from?
+<center>*cost-effectiveness* = $\frac{∑_{t=1}^{10}total annual cost_t}{∑_{t=1}^{10}annual households effectively covered_t}$</center>
 
- [\[KPA2\]](#_msoanchor_2)Do we have a “standard” explanation for this choice?
-
- [\[KPA3\]](#_msoanchor_3)Do we have this summarized somewhere in the tool already? If not, is there a table with these estimates for each age- and sex-group that I could paste in here?
-
- [\[KPA4\]](#_msoanchor_4)Not sure if we have anything we can link to on this topic yet? If not, I’ll remove for now.
-
- [\[KPA5\]](#_msoanchor_5)Did we get this info from any other sources?
-
-> Insert equation 2
+&nbsp;  
+&nbsp; 

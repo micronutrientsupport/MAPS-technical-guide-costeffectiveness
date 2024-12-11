@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="MAPS Team">
-<meta name="dcterms.date" content="2024-11-26">
 
-<title>MAPS technical guide cost effectiveness</title>
+<title>MAPS technical guide cost effectiveness - 6&nbsp; Interpreting and comparing cost-effectiveness estimates</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./03_MethodsMetrics.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About this guide</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_Interpretation.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Interpreting and comparing cost-effectiveness estimates</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About this guide</span></span></a>
   </div>
 </li>
@@ -142,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Interpretation.html" class="sidebar-item-text sidebar-link">
+  <a href="./04_Interpretation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Interpreting and comparing cost-effectiveness estimates</span></span></a>
   </div>
 </li>
@@ -162,7 +161,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-this-guide" id="toc-about-this-guide" class="nav-link active" data-scroll-target="#about-this-guide"><span class="header-section-number">1</span> About this guide</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link active" data-scroll-target="#limitations"><span class="header-section-number">6.1</span> Limitations</a>
+  <ul class="collapse">
+  <li><a href="#hces-data" id="toc-hces-data" class="nav-link" data-scroll-target="#hces-data"><span class="header-section-number">6.1.1</span> <em>HCES data</em></a></li>
+  <li><a href="#cost-data" id="toc-cost-data" class="nav-link" data-scroll-target="#cost-data"><span class="header-section-number">6.1.2</span> <em>Cost data</em></a></li>
+  </ul></li>
+  <li><a href="#sensitivity-analysis" id="toc-sensitivity-analysis" class="nav-link" data-scroll-target="#sensitivity-analysis"><span class="header-section-number">6.2</span> Sensitivity analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -171,26 +175,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MAPS technical guide cost effectiveness</h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Interpreting and comparing cost-effectiveness estimates</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>MAPS Team </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 26, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -200,12 +192,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="about-this-guide" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> About this guide</h1>
-<p>This guide is intended to provide technical detail for the cost, effectiveness, and cost-effectiveness modelling of micronutrient interventions in the <strong><em>Micronutrient Action Policy Support (MAPS)</em></strong> tool.</p>
-<p>This guide can be read in sequence, or users can use the navigation panels to directly select the model section of interest.</p>
-<p>Complementary guides are provided for the <a href="https://help.micronutrient.support/" title="MAPS tool user guide">MAPS tool user guide</a> and <a href="https://learning.micronutrient.support/">MAPS learning resources</a>.</p>
-<p>Further information on the project and project team which created the MAPS tool can be found at the project website <a href="https://micronutrient.support/" class="uri">https://micronutrient.support/</a>. A summary of our co-design process, implemented to design and test the MAPS tool, can be found at [<img src="images/WiP_purplespanner.svg" class="img-fluid">].</p>
+<blockquote class="blockquote">
+<p>This section continues to be under development <img src="images/WiP_purplespanner.svg" class="img-fluid"></p>
+</blockquote>
+<section id="limitations" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="limitations"><span class="header-section-number">6.1</span> Limitations</h2>
+<p>When using the modeled cost, effectiveness, or cost-effectiveness results generated using the MAPS tool cost-effectiveness module, it is important to keep the limitations of (and caveats associated with using) the underlying data sources in mind.</p>
+<section id="hces-data" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="hces-data"><span class="header-section-number">6.1.1</span> <em>HCES data</em></h3>
+<p>Using household-level food consumption data to estimate the adequacy of the household diet without and with LSFF has several limitations (Adams, Vosti, Mbuya et al., 2022). Because the food consumption data are collected at the household level, it is not possible to generate estimates of individual-level food consumption and micronutrient intake without imposing assumptions about the intrahousehold distribution of food. In the MAPS tool, we assess apparent dietary micronutrient adequacy using the adult female equivalent method and assume that if the diet is adequate to meet the requirements of an adult female, it is likely adequate to meet the requirements of all household members. However, this does not mean that all household members are receiving an equitable share of the household’s total food consumption, so the micronutrient requirements of some household members may not be met even if the household diet is adequate to meet the requirements of a non-pregnant, non-lactating adult female.</p>
+<p>Another limitation is that household food consumption data are typically collected using a closed food list that may include aggregate food items (e.g., fresh fish), which can error in the estimated micronutrient content of the food, and/or may be missing key foods needed to accurately characterize diets, capture all important sources of nutrients, and accurately estimate the potential for LSFF, biofortification, or agronomic biofortification to improve the micronutrient adequacy of diets. Related, foods consumed away from home are often inadequately captured in HCESs or are not captured at all. Estimates of household food consumption are typically based on the recall of one (or several) household members, so underreporting of foods consumed by individuals, particularly outside the home, is possible. Because foods consumed away from home are, in many low- and middle-income countries, an increasingly important source of nutrients, the inadequate accounting of foods consumed outside the home could lead to an underestimation of total nutrient intake and overestimation of the prevalence of inadequate apparent intake. If foods consumed away from home are fortifiable or biofortifiable foods, this will also lead to an underestimate of the impact of these interventions on the micronutrient adequacy of diets. Finally, because HCESs do no collect data on consumption of micronutrient supplements, our estimates of micronutrient adequacy do not account for supplement use.</p>
+</section>
+<section id="cost-data" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="cost-data"><span class="header-section-number">6.1.2</span> <em>Cost data</em></h3>
+<p>The default cost parameters used in the MAPS cost models are, to the extent possible, based on the best available data and information sources. However, there is undoubtedly some level of error in these parameters, as, for example, it was not possible to interview all wheat flour refineries to collect data on the costs associated with fortification at their facilities, so many of our estimates are based on interviews with one or two refineries and extrapolated to the entire industry. Likewise, information provided from a few government personnel about the activities and costs associated with, e.g., regulatory monitoring of LSFF programs were assumed to reflect the situation nationally. It is also possible that some of the activities included in our cost models may not be relevant, or some relevant activities may not be included (this may be especially true for ex-ante cost models that estimate the cost of hypothetical micronutrient intervention programs, making locally-specific data collection particularly challenging). As such, it is critical for users to carefully scrutinize each cost parameter for accuracy in their local context and to make changes where needed. Conducting sensitivity analyses around particularly uncertain parameters (described below) is also very important. &nbsp;</p>
+</section>
+</section>
+<section id="sensitivity-analysis" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="sensitivity-analysis"><span class="header-section-number">6.2</span> Sensitivity analysis</h2>
+<p>Assessing the influence of uncertainty is an important part of conducting a comprehensive cost-effectiveness analysis. When estimating the cost of a micronutrient interventions, there is typically some degree of uncertainty around most parameter values. However, some sources of uncertainty will typically be much more important than other sources. Key sources may include parameter values that have a large impact on the total cost estimate, for example uncertainty about the cost of micronutrient premix for LSFF or the incremental cost of a biofortified seed variety compared to a traditional variety. Or, if the cost estimates will be used to help allocate government resources, paying special attention to uncertainty in M&amp;E costs would be important. There can also be uncertainly in estimated program impacts, and it is important to conduct sensitivity analyses around assumptions or uncertain parameter values that influence the impact, or effectiveness, of the intervention. In the context of estimating effective coverage in MAPS, this could include uncertainty around adherence with LSFF standards or framer adoption rates of biofortified crop production. &nbsp;</p>
+<p>Ultimately, we hope to add functionality to the cost and effectiveness module of the tool to allow users to define and automatically conduct sensitivity analyses around the cost, effectiveness, and/or cost-effectiveness of each intervention they define. In the meantime, we urge all users to manually conduct sensitivity analyses after estimating the cost, effectiveness, or cost-effectiveness of an intervention by copying the primary intervention and adjusting key parameters up and/or down to reflect uncertainty, and re-estimating cost, effectiveness, and/or cost-effectiveness.&nbsp;</p>
+<p>For cost estimates, this could begin by first identify key program cost drivers. Once these parameters are identified, data can be collected (e.g., time series data, if available) or assumptions made to establish ranges of uncertainty (e.g., plus or minus 25%) regarding the amounts of specific inputs (e.g., person-days), input prices/values (e.g., micronutrient fortificant prices, seed prices, wage rates, etc.), or other key sources of uncertainty. Then, in the copy of the primary cost model, these parameters can be ‘shocked’ by the estimated or assumed uncertainty, and the change in estimated costs noted and reported alongside the primary cost estimate.</p>
+<p>For effectiveness estimates, it is important to identify key sources of uncertainty for a specific intervention scenario. For LSFF this could include the percent of a food vehicle that is fortifiable, the expected micronutrient loss from point of fortification to households, or expected adherence with fortification standards. For biofortification via crop breeding, key sources of uncertainty could include the expected micronutrient contents of the biofortified variety compared to the traditional variety. For agronomic biofortification, an important parameter to include in sensitivity analysis might be expected increase in the mineral contents of the edible portion of the crop as a result of mineral-enhanced fertilizer application. And for both types of biofortification, modeling uncertainty in farmer adoption rates may be important. &nbsp;&nbsp;</p>
+<p>When there is more than one source of uncertainty or you are aiming to simultaneously assess the impact of uncertainty in both costs and impacts of an intervention, uncertainly can be group into best-case and worst-case scenarios to identify ranges of possible costs, effectiveness, and cost-effectiveness for a specific intervention.&nbsp;</p>
+<p>Interpreting and using the results of sensitivity analyses can be challenging, but doing so can lend credibility to the results.&nbsp; For example, if the results of best-case/worst-case sensitivity analyses suggest that Program A will always be more cost-effective than Program B, this can lend confidence to choosing Program A. On the other hand, if a given program under- or out-performs another depending on sensitivity analyses, this may leave decision-makers with doubts regarding which program to choose. Ultimately, it is up to the users of the evidence generated in the MAPS tool cost and effectiveness module to decide how much uncertainty they are comfortable with, but it is important to be transparent about uncertainty and integrate it into your economic evaluations using sensitivity analysis.</p>
 
 
 </section>
@@ -622,10 +632,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./03_MethodsMetrics.html" class="pagination-link" aria-label="The steps in MAPS cost, effectiveness and cost-effectiveness modelling">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The steps in MAPS cost, effectiveness and cost-effectiveness modelling</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="MAPS cost effectiveness models">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">MAPS cost effectiveness models</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

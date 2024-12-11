@@ -2,11 +2,9 @@
 
 ## The scope of this guide
 
-This guide is aimed at anyone looking to understand the cost, effectiveness, and cost-effectiveness modelling of micronutrient interventions available in the MAPS tool as part of the learning activity.
+This guide is aimed at anyone looking to understand the cost, effectiveness, and cost-effectiveness modelling of micronutrient interventions available in the MAPS tool.
 
-This section under development ![](images/WiP_purplespanner.svg)
-
-The MAPS tool has been developed to meet the previously unmet needs of users for an “easy to use” system that does not require extensive training.
+The MAPS tool has been developed to meet the previously unmet needs of users for an “easy to use” system that does not require extensive training. To further support user navigation of the tool interface, a complementary user manual for the tool includes the cost, effectiveness, and cost-effectiveness features <https://help.micronutrient.support/CostEffectiveness.html>.
 
 ## Accessing the MAPS tool
 
