@@ -4,7 +4,7 @@ project:
 book:
   title: "MAPS technical guide cost effectiveness"
   author: "MAPS Team" #Katie Adams 
-  date: "11/26/2024" #USA format NB
+  date: "11/26/2024" #USA format NB.
  #site-url: https://CEmodels.micronutrient.support/
  
   sidebar: 
