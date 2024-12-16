@@ -29,8 +29,9 @@ Note that adult female serves as the reference household member because her food
 : Table 4: Energy adjustment parameters for lactating women and breastfeeding infants
 
 </center>
-&nbsp;  
-&nbsp;  
+
+ \
+ \
 5.       We divide average daily total apparent micronutrient intake by the number of AFEs in the household to calculate baseline daily apparent micronutrient intake per AFE.
 
 We compare daily apparent micronutrient intake per AFE to the estimated average requirement (EAR) of an adult female to classify the household diet as adequate or inadequate to meeting the focus micronutrient requirements of an adult female. These estimates are then summarized, accounting for survey weights, at national and subnational levels to generate estimates of the baseline prevalence of inadequacy of the focus micronutrient. Note that the default EARs in the tool are based the harmonized average requirements presented in Allen, Carriquiry & Murphy (2019), but these values can be modified by the user within the cost and effectiveness module framework of the tool.
@@ -63,9 +64,11 @@ We compare daily apparent micronutrient intake per AFE to the estimated average 
 
       a.        Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).
 
-4.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by biofortification by multiplying daily average apparent consumption of the crop per AFE (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the additional micronutrient concentration in the biofortified crop (country-specific default values based on the HarvestPlus database of biofortified crops released - <https://bcr.harvestplus.org/>) multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.
+4.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake per AFE provided by biofortification by multiplying daily average apparent consumption of the crop per AFE (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop (via crop breeding) in each year is calculated as the difference in the micronutrient concentration in the non-biofortified variety and the biofortified variety, where the micronutrient concentration is calculated as the average of country-specific released varieties according to the HarvestPlus database of biofortified crops released (<https://bcr.harvestplus.org/))> multiplied by the modeled annual farmer adoption rate. See Table 5 for biofortification effectiveness parameters for Malawi and Ethiopia. Each of these parameters is modifiable by the user in the tool.
 
-      a.        Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
+*Note that* we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
+
+For agronomic biofortification, the average additional micronutrient content is based on published studies (either based on the absolute increase in the micronutrient contents if reported int the study or calculated based on the percent increase reported in the study. See Tables 6 and 7 for agronomic biofortification effectiveness parameters for granular and foliar applications, respectively. Each of these parameters is modifiable by the user in the tool.
 
 5.       We add additional daily apparent micronutrient intake per AFE provided by LSFF or biofortification to baseline daily apparent micronutrient intake per AFE to generate an estimate of total daily apparent micronutrient intake per AFE with LSFF or biofortification.
 
@@ -85,9 +88,11 @@ We compare daily apparent micronutrient intake per AFE to the estimated average 
 
       a.        Note that to account for higher bioavailability of folic acid compared to dietary folate, we convert average folic acid fortification levels to dietary folate equivalents (DFEs) by multiplying the average fortification level by 1.7 (Bailey, 2000).
 
-3.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by biofortification by multiplying daily average apparent consumption of the crop (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the additional micronutrient concentration in the biofortified crop (country-specific default values based on the HarvestPlus database of biofortified crops released - <https://bcr.harvestplus.org/>), multiplied by the farmer adoption rate. Each of these parameters is modifiable by the user in the tool.
+3.       For modeling biofortification (via crop breeding or agronomic biofortification), for each year of the 10-year modeling time horizon we calculate the additional daily apparent micronutrient intake provided by biofortification by multiplying daily average apparent consumption of the crop (assumed constant over the 10-year horizon) by the year-specific average additional micronutrient content in the biofortified crop. Note that the average additional micronutrient content in the biofortified crop in each year is calculated as the difference in the micronutrient concentration in the non-biofortified variety and the biofortified variety, where the micronutrient concentration is calculated as the average of country-specific released varieties according to the HarvestPlus database of biofortified crops released (https://bcr.harvestplus.org/)) multiplied by the modeled annual farmer adoption rate. See Table 5 for biofortification effectiveness parameters for Malawi and Ethiopia. Each of these parameters is modifiable by the user in the tool.
 
-      a.        Note that we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
+*Note that* we convert vitamin A in the form of pro-vitamin A (PVA) to retinol activity equivalents (RAE) assuming a 12:1 conversion factor of PVA to RAE (Institute of Medicine, 2001).
+
+For agronomic biofortification, the average additional micronutrient content is based on published studies (either based on the absolute increase in the micronutrient contents if reported int the study or calculated based on the percent increase reported in the study. See Tables 6 and for agronomic biofortification effectiveness parameters for granular and foliar applications, respectively. Each of these parameters is modifiable by the user in the tool.
 
 4.       We add additional daily apparent micronutrient intake provided by LSFF or biofortification to baseline daily apparent micronutrient intake and recalculated the nutrient density of the household diet with LSFF or biofortification (that is, we divide total daily average apparent micronutrient intake with LSFF or biofortification by total daily average apparent energy intake, multiplied by 1000 to express the nutrient density per 1,000 kcal).
 
@@ -101,6 +106,430 @@ We compare daily apparent micronutrient intake per AFE to the estimated average 
 
       b.        Also note that the critical upper density is calculated as the UL of a non-pregnant, non-lactating adult female 18-30 year of age divided by the energy requirements of a non-pregnant, non-lactating adult female 18-30 years of age, multiplied by 1,000.
 
+<center>Table 5: Biofortification (via crop breeding) effectiveness parameter calculations</center>
+
+```{=html}
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="12%" rowspan=2 style='width:12.54%;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Country<o:p></o:p></span></b></p>
+  </td>
+  <td width="8%" rowspan=2 style='width:8.74%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Crop<o:p></o:p></span></b></p>
+  </td>
+  <td width="40%" colspan=2 style='width:40.84%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Micronutrient
+  content in non-biofortified variety<o:p></o:p></span></b></p>
+  </td>
+  <td width="19%" colspan=2 style='width:19.26%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Average
+  micronutrient content in biofortified variety<o:p></o:p></span></b></p>
+  </td>
+  <td width="18%" style='width:18.64%;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Additional
+  micronutrient content in biofortified variety <o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="13%" style='width:13.1%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Value</span></b><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="27%" style='width:27.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Source</span></b><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Value</span></b><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="10%" style='width:10.52%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>Source</span></b><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="18%" style='width:18.64%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  lang=EN-US style='font-family:"Calibri",sans-serif;color:black'>(calculated)</span></b><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="100%" colspan=7 valign=bottom style='width:100.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#B7D4EF;mso-background-themecolor:text2;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri",sans-serif;
+  color:black'>Vitamin A </span></b><span lang=EN-US style='font-family:"Calibri",sans-serif;
+  color:black'>(mcg RAE per g)<b><o:p></o:p></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="12%" style='width:12.54%;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Ethiopia</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Maize</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="13%" style='width:13.1%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="27%" style='width:27.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>West African FCT, item
+  01_004</span><span lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>3.1</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="10%" style='width:10.52%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>(1)<o:p></o:p></span></p>
+  </td>
+  <td width="18%" style='width:18.64%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>3.1</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="12%" style='width:12.54%;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Ethiopia</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Sweet potato</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="13%" style='width:13.1%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.05</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="27%" style='width:27.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>West African FCT, item
+  02_022</span><span lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>12.0</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="10%" style='width:10.52%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>(2)<o:p></o:p></span></p>
+  </td>
+  <td width="18%" style='width:18.64%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>11.9</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="12%" style='width:12.54%;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Malawi</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Maize</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="13%" style='width:13.1%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="27%" style='width:27.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Malawi FCT, item
+  MW01_0038</span><span lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.55</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="10%" style='width:10.52%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>(3)<o:p></o:p></span></p>
+  </td>
+  <td width="18%" style='width:18.64%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.6</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="12%" style='width:12.54%;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Malawi</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Sweet potato</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="13%" style='width:13.1%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.02</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="27%" style='width:27.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Malawi FCT, item
+  MW01_0065</span><span lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>5.83</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="10%" style='width:10.52%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>(4)<o:p></o:p></span></p>
+  </td>
+  <td width="18%" style='width:18.64%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>5.8</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="100%" colspan=7 style='width:100.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#B7D4EF;mso-background-themecolor:text2;mso-background-themetint:
+  51;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b><span lang=EN-US style='font-family:"Calibri",sans-serif;
+  color:black'>Iron </span></b><span lang=EN-US style='font-family:"Calibri",sans-serif;
+  color:black'>(mg per g)<b><o:p></o:p></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes'>
+  <td width="12%" style='width:12.54%;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Malawi</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Beans</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="13%" style='width:13.1%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.07</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="27%" style='width:27.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>Malawi FCT, average of
+  items MW02_0004, MW02_0007, and MW02_0017</span><span lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="8%" style='width:8.74%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.09</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+  <td width="10%" style='width:10.52%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>(5)<o:p></o:p></span></p>
+  </td>
+  <td width="18%" style='width:18.64%;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US
+  style='font-family:"Calibri",sans-serif;color:black'>0.02</span><span
+  lang=EN-US><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+```
+Sources:
+
+\(1\) Average content of released varieties according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=71&country_name=Ethiopia> and assuming 12:1 conversion ratio of pro-vitamin A (PVA) to retinol activity equivalents (RAE).
+
+\(2\) Average content of released varieties according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=71&country_name=Ethiopia> and assuming 12:1 conversion ratio of pro-vitamin A (PVA) to retinol activity equivalents (RAE).
+
+\(3\) Average content of released varieties according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=134&country_name=Malawi> and assuming 12:1 conversion ratio of pro-vitamin A (PVA) to retinol activity equivalents (RAE).
+
+\(4\) Average content of released varieties according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=134&country_name=Malawi> and assuming 12:1 conversion ratio of pro-vitamin A (PVA) to retinol activity equivalents (RAE).
+
+\(5\) Average content of released varieties in Rwanda according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=184&country_name=Rwanda>.
+
+<center>Table 6. Agronomic biofortification effectiveness parameters: granular application</center>
+
+| Micronutrient |    Crop    | Additional concentration from agronomic biofortification | Units |                            Source                            |
+|:-------------:|:----------:|:--------------------------------------------------------:|:-----:|:------------------------------------------------------------:|
+|     zinc      |   millet   |                          0.004                           | mg/g  |     Calculation based on Teklu, Gashu, Joy et al. (2023)     |
+|     zinc      | groundnut  |                       *(no data)*                        |       |                                                              |
+|     zinc      |   maize    |                          0.002                           | mg/g  | Calculation based on Botoman, Chimungu, Bailey et al. (2022) |
+|     zinc      | pigeon pea |                       *(no data)*                        |       |                                                              |
+|     zinc      |    rice    |                          0.002                           | mg/g  |     Calculation based on Joy, Stein, Young et al. (2015)     |
+|     zinc      |    teff    |                          0.007                           | mg/g  |            Calculation based on Joy et al. (2015)            |
+|     zinc      |   wheat    |                          0.004                           | mg/g  |            Calculation based on Joy et al. (2015)            |
+|   selenium    |   cowpea   |                          0.296                           | mcg/g |  Ligowe, Young, Ander et al. (2020) (average of 4C and T7)   |
+|   selenium    | groundnut  |                          0.711                           | mcg/g |                     Ligowe et al. (2020)                     |
+|   selenium    |   maize    |                          0.209                           | mcg/g |                     Ligowe et al. (2020)                     |
+|   selenium    | pigeon pea |                          0.017                           | mcg/g |                     Ligowe et al. (2020)                     |
+|     iron      |   millet   |                          0.027                           | mg/g  |           Calculation based on Teklu et al. (2023)           |
+
+<center>Table 7. Agronomic biofortification effectiveness parameters: foliar application</center>
+
+|    Micronutrient     |   Crop    | Additional concentration from agronomic biofortification | Units |                 Source                 |
+|:--------------------:|:---------:|:--------------------------------------------------------:|:-----:|:--------------------------------------:|
+|         zinc         |   maize   |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
+|         zinc         |   rice    |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
+|         zinc         |   wheat   |                          0.012                           | mg/g  |              Zia, Ahmed,               |
+| Bailey et al. (2020) |           |                                                          |       |                                        |
+|       selenium       | groundnut |                          0.371                           | mcg/g |            Chilimba, Young.            |
+|     & Joy (2014)     |           |                                                          |       |                                        |
+|       selenium       |   maize   |                          0.100                           | mcg/g |            Chilimba et al.             |
+|       \(2014\)       |           |                                                          |       |                                        |
+|       selenium       | soyabean  |                          0.768                           | mcg/g |            Chilimba et al.             |
+|       \(2014\)       |           |                                                          |       |                                        |
+
 ## Modeling cost-effectiveness in the MAPS tool
 
 When the user has estimated both the cost and effectiveness of a micronutrient intervention, they also able to generate estimates of the cost-effectiveness of the micronutrient intervention program over the 10-year time horizon. To estimate cost-effectiveness, the year-specific percent of households effectively covered (that is, the percent of households with inadequate intake of the focus micronutrient in the baseline (i.e., without intervention) scenario that achieve dietary micronutrient adequacy with the intervention) are converted to estimates of the annual number of households effectively covered. This requires introducing estimates of the projected number of households for each year of the 10-year time horizon.
@@ -111,5 +540,4 @@ The cost-effectiveness of the intervention is then calculated as the 10-year sum
 
 <center>*cost-effectiveness* = $\frac{∑_{t=1}^{10}total annual cost_t}{∑_{t=1}^{10}annual households effectively covered_t}$</center>
 
-&nbsp;  
-&nbsp; 
+| 

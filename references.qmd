@@ -4,13 +4,17 @@ Adams K.P., Vosti S.A., Mbuya M.N.N., Friesen V.M. & Engle-Stone R. (2022). Upda
 
 Allen L.H., Carriquiry A.L. & Murphy S.P. (2019). Perspective: Proposed harmonized nutrient reference values for populations. Advances in Nutrition, 11, 469-483 [https://doi.org/10.1093/advances/nmz096](https://doi.org/10.1093/advances/nmz096){target="_blank"}
 
-Bailey L.B. (2000). New standard for dietary folate intake in pregnant women123. The American Journal of Clinical Nutrition, 71, 1304S-1307S [https://doi.org/10.1093/ajcn/71.5.1304s](https://doi.org/10.1093/ajcn/71.5.1304s){target="“_blank”"}
+Bailey L.B. (2000). New standard for dietary folate intake in pregnant women. The American Journal of Clinical Nutrition, 71, 1304S-1307S [https://doi.org/10.1093/ajcn/71.5.1304s](https://doi.org/10.1093/ajcn/71.5.1304s){target="“_blank”"}
+
+Botoman, L., Chimungu, J. G., Bailey, E. H., Munthali, M. W., Ander, E.L., Mossa, A.-W., Young, S. D., Broadley, M. R., Lark, R. M., & Nalivata, P. C. (2022). Agronomic biofortification increases grain zinc concentration of maize grown under contrasting soil types in Malawi. Plant Direct, 6(11), e458. <https://doi.org/10.1002/pld3.458>
 
 Bouis H.E., Hotz C., McClafferty B., Meenakshi J.V. & Pfeiffer W.H. (2011). Biofortification: A new tool to reduce micronutrient malnutrition. Food and Nutrition Bulletin, 32, S31-S40 [https://journals.sagepub.com/doi/10.1177/15648265110321S105](https://journals.sagepub.com/doi/10.1177/15648265110321S105){target="“_blank”"}
 
 Bureau of Economic Analysis (2020). Table 1.1.9. Implicit price deflators for gross domestic product. <https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&1921=survey&1903=13#reqid=19&step=3&isuri=1&1921=survey&1903=13>
 
 Centers for Disease Control and Prevention (2024). Maternal diet and breastfeeding. [https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/maternal-diet.html](https://www.cdc.gov/breastfeeding-special-circumstances/hcp/diet-micronutrients/maternal-diet.html){target="“_blank”"}
+
+Chilimba, A.D.C., Young, S.D., & Joy, E.J.M. (2014). Agronomic biofortification of maize, soybean and groundnut with selenium in intercropping and sole cropping systems. African Journal of Agricultural Research, 9(50), 3620-3626 <https://doi.org/10.5897/AJAR2014.8978>
 
 Coates J., Colaiezzi B., Fiedler J.L., Wirth J., Lividini K. & Rogers B. (2012). A program needs-driven approach to selecting dietary assessment methods for decision-making in food fortification programs. Food and Nutrition Bulletin, 33, S146-S156 [https://journals.sagepub.com/doi/abs/10.1177/15648265120333S202](https://journals.sagepub.com/doi/abs/10.1177/15648265120333S202){target="“_blank”"}
 
@@ -24,11 +28,17 @@ Food and Agriculture Organization of the United Nations & The World Bank (2018).
 
 Institute of Medicine (2001). Dietary reference intakes for vitamin a, vitamin k, arsenic, boron, chromium, copper, iodine, iron, manganese, molybdenum, nickel, silicon, vanadium, and zinc. National Academies Press, Washington, D.C.
 
+Joy E.J.M., Stein A.J., Young S.D., Ander E.L., Watts M.J. & Broadley M.R. (2015) Zinc-enriched fertilisers as a potential public health intervention in Africa. *Plant Soil* 389, 1–24 <https://doi.org/10.1007/s11104-015-2430-8>
+
+Ligowe, I.S. Young, S.D. Ander, E.L. Kabambe, V. Chilimba, A.D.C. Bailey, E.H. Lark, R.M. Nalivata, P.C.2020 Selenium biofortification of crops on a Malawi Alfisol under conservation agriculture. *Geoderma*, 369, 114315 <https://doi.org/10.1016/j.geoderma.2020.114315>
+
 Olson R., Gavin-Smith B., Ferraboschi C. & Kraemer K. (2021). Food fortification: The advantages, disadvantages and lessons from Sight and Life programs. Nutrients, 13 [https://doi.org/10.3390/nu13041118](https://doi.org/10.3390/nu13041118){target="“_blank”"}
 
 Saltzman A., Birol E., Bouis H.E., Boy E., De Moura F.F., Islam Y. & Pfeiffer W.H. (2013). Biofortification: Progress toward a more nourishing future. Global Food Security, 2, 9-17 [https://doi.org/10.1016/j.gfs.2012.12.003](https://doi.org/10.1016/j.gfs.2012.12.003){target="“_blank”"}
 
 Sanders G.D., Neumann P.J., Basu A., Brock D.W., Feeny D., Krahn M., . . . Ganiats T.G. (2016). Recommendations for conduct, methodological practices, and reporting of cost-effectiveness analyses: Second panel on cost-effectiveness in health and medicine. JAMA, 316, 1093-1103 [https://doi.org/10.1001/jama.2016.12195](https://doi.org/10.1001/jama.2016.12195){target="“_blank”"}
+
+Teklu, D., Gashu, D., Joy, E. J. M., Lark, R. M., Bailey, E. H., Wilson, L., Amede, T., & Broadley, M. R. (2023). Impact of zinc and iron agronomic biofortification on grain mineral concentration of finger millet varieties as affected by location and slope. *Frontiers in nutrition*, *10*, 1159833 <https://doi.org/10.3389/fnut.2023.1159833>
 
 Turner H.C., Sandmann F.G., Downey L.E., Orangi S., Teerawattananon Y., Vassall A. & Jit M. (2023). What are economic costs and when should they be used in health economic studies? Cost Effectiveness and Resoure Allocation, 21, 31 [https://doi.org/10.1186/s12962-023-00436-w\\](https://doi.org/10.1186/s12962-023-00436-w){target="“_blank”"}
 
@@ -41,3 +51,5 @@ USAID Advancing Nutrition (2023b). Operational overview: Needs assessment and de
 WHO Programme of Nutrition (1998). Complementary feeding of young children in developing countries: A review of current scientific knowledge. WHO, Geneva, Switzerland.
 
 World Health Organization (2003). Making choices in health: WHO guide to cost-effectiveness analysis. (eds T. Tan-Torres Edejer, B. R., T. Adams, R. Hutubessy, A. Acharya, D.B. Evans, et al.). Geneva, Switzerland.
+
+Zia MH, Ahmed I, Bailey EH, Lark RM, Young SD, Lowe NM, Joy EJM, Wilson L, Zaman M and Broadley MR (2020) Site-Specific Factors Influence the Field Performance of a Zn-Biofortified Wheat Variety. Frontiers in Sustainable Food Systems 4:135 <https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2020.00135>

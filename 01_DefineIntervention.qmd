@@ -222,6 +222,8 @@ Selecting the nature of the intervention at this stage will impact several of th
 <center>Table 2: Nature of intervention</center>
 
 ```{=html}
+
+
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
  style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
  mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
