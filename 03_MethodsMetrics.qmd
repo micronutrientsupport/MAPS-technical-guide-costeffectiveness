@@ -501,7 +501,7 @@ Sources:
 <center>Table 6. Agronomic biofortification effectiveness parameters: granular application</center>
 
 | Micronutrient |    Crop    | Additional concentration from agronomic biofortification | Units |                            Source                            |
-|:-------------:|:----------:|:--------------------------------------------------------:|:-----:|:------------------------------------------------------------:|
+|:---------:|:---------:|:-----------------:|:---------:|:-------------------:|
 |     zinc      |   millet   |                          0.004                           | mg/g  |     Calculation based on Teklu, Gashu, Joy et al. (2023)     |
 |     zinc      | groundnut  |                       *(no data)*                        |       |                                                              |
 |     zinc      |   maize    |                          0.002                           | mg/g  | Calculation based on Botoman, Chimungu, Bailey et al. (2022) |
@@ -517,18 +517,14 @@ Sources:
 
 <center>Table 7. Agronomic biofortification effectiveness parameters: foliar application</center>
 
-|    Micronutrient     |   Crop    | Additional concentration from agronomic biofortification | Units |                 Source                 |
-|:--------------------:|:---------:|:--------------------------------------------------------:|:-----:|:--------------------------------------:|
-|         zinc         |   maize   |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
-|         zinc         |   rice    |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
-|         zinc         |   wheat   |                          0.012                           | mg/g  |              Zia, Ahmed,               |
-| Bailey et al. (2020) |           |                                                          |       |                                        |
-|       selenium       | groundnut |                          0.371                           | mcg/g |            Chilimba, Young.            |
-|     & Joy (2014)     |           |                                                          |       |                                        |
-|       selenium       |   maize   |                          0.100                           | mcg/g |            Chilimba et al.             |
-|       \(2014\)       |           |                                                          |       |                                        |
-|       selenium       | soyabean  |                          0.768                           | mcg/g |            Chilimba et al.             |
-|       \(2014\)       |           |                                                          |       |                                        |
+| Micronutrient |   Crop    | Additional concentration from agronomic biofortification | Units |                 Source                 |
+|:----------:|:----------:|:---------------------:|:----------:|:-------------:|
+|     zinc      |   maize   |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
+|     zinc      |   rice    |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
+|     zinc      |   wheat   |                          0.012                           | mg/g  |    Zia, Ahmed,Bailey et al. (2020)     |
+|   selenium    | groundnut |                          0.371                           | mcg/g |     Chilimba, Young. & Joy (2014)      |
+|   selenium    |   maize   |                          0.100                           | mcg/g |         Chilimba et al. (2014)         |
+|   selenium    | soyabean  |                          0.768                           | mcg/g |         Chilimba et al. (2014)         |
 
 ## Modeling cost-effectiveness in the MAPS tool
 
