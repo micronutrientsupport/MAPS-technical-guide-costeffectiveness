@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The MAPS tool can be accessed directly from <a href="https://maps.micronutrient.support/" class="uri">https://maps.micronutrient.support/</a> or <a href="https://maps.micronutrient.support/maps-tool" class="uri">https://maps.micronutrient.support/maps-tool</a>, and via our shortcut <a href="https://www.maps.africa/" class="uri">https://www.maps.africa/</a>. All three links lead to exactly the same version of the tool.</p>
 <p>The MAPS tool has been optimised for screen sizes typically found with desktop and laptop devices, rather than smaller mobile devices. Using smaller devices is possible, but will not provide the intended user experience of the interfaces, particularly for the cost-effectiveness module. The tool will work in widely used commercial operating systems and web browsers (as at 2024).</p>
 <p>Access is free of charge and does not require users to log-in. Users of the full scope of functionality, i.e.&nbsp;the cost &amp; effectiveness modelling, and/or bring-your-own data, may prefer to create a user account in order to save for a later date their own input data and models.</p>
-<p>The current version of the tool is &lt;<img src="images/WiP_purplespanner.svg" class="img-fluid">&gt;, and <strong>returning users</strong> may need to check a locally cached earlier version is not being used. If this is the case, follow your browser instructions to clear the cache and refresh your version of the MAPS tool.</p>
+<p>The current version of the tool is <span class="replace">tool-version</span> and <strong>returning users</strong> may need to check a locally cached earlier version is not being used. If this is the case, follow your browser instructions to clear the cache and refresh your version of the MAPS tool.</p>
 
 
 </section>
@@ -626,6 +626,149 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>
+
+    fetch('https://api.micronutrient.support/v2/self/version').then(function (response) {
+
+        // The API call was successful!
+
+        return response.json();
+
+    }).then(function (data) {
+
+        // This is the JSON from our response
+
+        Array.from(document.getElementsByClassName("replace")).forEach(
+
+          function(element, index, array) {
+
+              if(element.innerHTML === 'api-version') {
+
+                element.innerHTML = data.data[0].api
+
+              }
+
+              if(element.innerHTML === 'data-seed') {
+
+                element.innerHTML = data.data[0].seed
+
+              }
+
+              if(element.innerHTML === 'data-schema') {
+
+                element.innerHTML = data.data[0].schema
+
+              }
+
+              console.log(element.innerHTML)
+
+              // do stuff
+
+          }
+
+      );
+
+    }).catch(function (err) {
+
+        // There was an error
+
+        console.warn('Something went wrong.', err);
+
+        Array.from(document.getElementsByClassName("replace")).forEach(
+
+          function(element, index, array) {
+
+              if(element.innerHTML === 'api-version') {
+
+                element.innerHTML = 'Error loading API version'
+
+                element.classList.add('error')
+
+              }
+
+              if(element.innerHTML === 'data-seed') {
+
+                element.innerHTML = 'Error loading data seed version'
+
+                element.classList.add('error')
+
+              }
+
+              if(element.innerHTML === 'data-schema') {
+
+                element.innerHTML = 'Error loading data schema version'
+
+                element.classList.add('error')
+
+              }
+
+          }
+
+      );
+
+    });
+
+    fetch('https://maps.micronutrient.support/assets/version.json').then(function (response) {
+
+        // The API call was successful!
+
+        console.log(response)
+
+        return response.json();
+
+    }).then(function (data) {
+
+      console.log(data)
+
+        // This is the JSON from our response
+
+        Array.from(document.getElementsByClassName("replace")).forEach(
+
+          function(element, index, array) {
+
+              if(element.innerHTML === 'tool-version') {
+
+                element.innerHTML = data.version
+
+              }
+
+          }
+
+      );
+
+    }).catch(function (err) {
+
+        // There was an error
+
+        console.warn('Something went wrong.', err);
+
+                      Array.from(document.getElementsByClassName("replace")).forEach(
+
+          function(element, index, array) {
+
+              if(element.innerHTML === 'tool-version') {
+
+                element.innerHTML = 'Error loading tool version'
+
+                element.classList.add('error')
+
+              }
+
+          }
+
+      );
+
+    });
+
+    </script>
+
+    <style>
+
+    .replace { font-weight: bold; }
+
+    .error { color: #990000; }
+
+    </style>
 
 
 
