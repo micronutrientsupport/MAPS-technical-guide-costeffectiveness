@@ -496,13 +496,13 @@ Sources:
 
 \(4\) Average content of released varieties according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=134&country_name=Malawi> and assuming 12:1 conversion ratio of pro-vitamin A (PVA) to retinol activity equivalents (RAE).
 
-\(5\) Average content of released varieties in Rwanda according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=184&country_name=Rwanda>.
-&nbsp;  
-&nbsp;  
+\(5\) Average content of released varieties in Rwanda according to HarvestPlus <https://bcr.harvestplus.org/varieties_released/country?id_country=184&country_name=Rwanda>.  \
+ \
+
 <center>Table 6. Agronomic biofortification effectiveness parameters: granular application</center>
 
 | Micronutrient |    Crop    | Additional concentration from agronomic biofortification | Units |                            Source                            |
-|:---------:|:---------:|:-----------------:|:---------:|:-------------------:|
+|:-------------:|:----------:|:--------------------------------------------------------:|:-----:|:------------------------------------------------------------:|
 |     zinc      |   millet   |                          0.004                           | mg/g  |     Calculation based on Teklu, Gashu, Joy et al. (2023)     |
 |     zinc      | groundnut  |                       *(no data)*                        |       |                                                              |
 |     zinc      |   maize    |                          0.002                           | mg/g  | Calculation based on Botoman, Chimungu, Bailey et al. (2022) |
@@ -515,12 +515,14 @@ Sources:
 |   selenium    |   maize    |                          0.209                           | mcg/g |                     Ligowe et al. (2020)                     |
 |   selenium    | pigeon pea |                          0.017                           | mcg/g |                     Ligowe et al. (2020)                     |
 |     iron      |   millet   |                          0.027                           | mg/g  |           Calculation based on Teklu et al. (2023)           |
-&nbsp;  
-&nbsp;  
+
+ \
+ \
+
 <center>Table 7. Agronomic biofortification effectiveness parameters: foliar application</center>
 
 | Micronutrient |   Crop    | Additional concentration from agronomic biofortification | Units |                 Source                 |
-|:----------:|:----------:|:---------------------:|:----------:|:-------------:|
+|:-------------:|:---------:|:--------------------------------------------------------:|:-----:|:--------------------------------------:|
 |     zinc      |   maize   |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
 |     zinc      |   rice    |                          0.004                           | mg/g  | Calculation based on Joy et al. (2015) |
 |     zinc      |   wheat   |                          0.012                           | mg/g  |    Zia, Ahmed,Bailey et al. (2020)     |
